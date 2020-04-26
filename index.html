@@ -9,24 +9,55 @@
             background-repeat: no-repeat;
             background-size: auto;
         }
-        h1 {
-            
 
-        }
+
+.item1 { grid-area: header; }
+.item2 { grid-area: left; 
+ background-image: url("GrassSamp1.jpg");       
+}
+.item3 { grid-area: main; 
+max-width: 1100px;
+background-color: rgb(211, 211, 211);
+
+}
+.item4 { grid-area: right; 
+background-image: url("GrassSamp1.jpg");
+}
+.item5 { grid-area: footer; }
+
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    'left       header   right '
+    'left        main    right '
+    'left     footer    right';
+  grid-gap: 0px;
+  background-color: rgb(211, 211, 211);
+  padding: 0px;
+}
+
+.grid-container > div {
+  background-color: rgb(211, 211, 211);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
     </style>
 </head>
 <body>
     
-
-    <h1>ქეთა, მზად ხარ ბუღალტერიის სასწავლად?</h1>
-
+<div class="grid-container">
+  <div class="item1"><h1>ქეთა, მზად ხარ ბუღალტერიის სასწავლად?</h1></div>
+  <div class="item2"></div>
+  <div class="item3"> 
     <ol>
         <li>
             <a href="#business"> ბისზნესი და ოპერაციების ჩაწერა </a>      
         </li>
     </ol>
 
-<p id="business">ბიზნესი და ოპერაციების ჩაწერა<br>
+  <p id="business">ბიზნესი და ოპერაციების ჩაწერა<br>
 ამ გაკვეთილს დავიწყებთ ბუღალტერიის ზოგადი მიმოხილვით. <br>
 რა არის ბუღალტერია? <br>
 ბუღალტერია, იგივე ბუღალტრული აღრიცხვა არის ფინანსური ოპერაციების ჩაწერის პროცესი. ჩაწერის უნდა მოხდეს ზუსტად და თანმიმდევრულად. <br> <br>
@@ -68,6 +99,19 @@
 •   ნაღდი ფული წვრილმანი ხარჯებისთვის<br>
 •   ხელფასები<br>
 </p>
+
+</div>  
+
+  <div class="item4"></div>
+  <div class="item5"></div>
+</div>
+
+
+    
+
+   
+
+
 
 </body>
 </html>
