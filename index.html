@@ -11,7 +11,55 @@
         }
 
 
-.header { grid-area: header; }
+
+ul {
+  list-style-type: none;
+  margin: 10;
+   padding: 10px 0px;
+  overflow: hidden;
+  background-color: #4CAF50;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  border: 1px solid #e7e7e7;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  font-size: 20px;
+}
+
+li a {
+  display: inline;
+  color: white;
+  text-align: center;
+  padding: 20px 16px;
+  
+  text-decoration: none;  
+}
+
+li {
+  display: inline;
+  float: left;
+  border-right:2px  #white;
+}
+
+.active {
+  background-color: #4CAF50;
+}
+
+ul.topnav li a:hover:not(.active) {background-color: #111;}
+
+ul.topnav li a.active {background-color: #4CAF50;}
+
+ul.topnav li.right {float: right;}
+
+@media screen and (max-width: 600px) {
+  ul.topnav li.right, 
+  ul.topnav li {float: none;}
+}
+
+.header { grid-area: header; 
+
+}
 .left { grid-area: left; 
  background-image: url("GrassSamp1.jpg");  
  min-width: 300px;     
@@ -68,7 +116,16 @@ min-width: 300px;
 <body>
     
 <div class="grid-container">
-  <div class="header"><h1>ქეთა, მზად ხარ ბუღალტერიის სასწავლად?</h1></div>
+  <div class="header">
+<ul>
+  <li><a href="default.asp">ქეთა მიყვარხარ</a></li>
+  <li><a href="about.asp">ქეთევან მიყვარხარ</a></li>
+  <li><a href="news.asp">ქეთუნა მიყვარხარ</a></li>
+  <li><a href="contact.asp">ქეთი მიყვარხარ</a></li>
+  <li><a href="about.asp">ქეთუნიკო მიყვარხარ</a></li>
+</ul>
+
+    <h1>ქეთა, მზად ხარ ბუღალტერიის სასწავლად?</h1></div>
   <div class="left"></div>
   
   <div class="content"> 
