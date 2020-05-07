@@ -1,241 +1,60 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
-    <title>Accounting</title>
-    <meta charset="utf-8">
-    <style>
-        body {
-            background-color: rgb(211, 211, 211);
-            background-repeat: no-repeat;
-            background-size: auto;
-        }
-
-
-
-ul {
-  list-style-type: none;
-  margin: 10;
-   padding: 10px 0px;
-  overflow: hidden;
-  background-color: #4CAF50;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  border: 1px solid #e7e7e7;
-  position: -webkit-sticky; /* Safari */
-  position: sticky;
-  font-size: 20px;
+<style>
+.item1 { grid-area: welcome; 
+background-color: #ff6600;
+height: 40px;
 }
-
-li a {
-  display: inline;
-  color: white;
-  text-align: center;
-  padding: 20px 16px;
-  
-  text-decoration: none;  
+.item2 { grid-area: contact; 
+background-color: #ffffff;
+height: 85px;
 }
-
-li {
-  display: inline;
-  float: left;
-  border-right:2px  #white;
-}
-
-.active {
-  background-color: #4CAF50;
-}
-
-ul.topnav li a:hover:not(.active) {background-color: #111;}
-
-ul.topnav li a.active {background-color: #4CAF50;}
-
-ul.topnav li.right {float: right;}
-
-@media screen and (max-width: 600px) {
-  ul.topnav li.right, 
-  ul.topnav li {float: none;}
-}
-
-.header { grid-area: header; 
+.item3 { grid-area: menu; 
+background-color:  #00cccc;
+height: 50px;
 
 }
-.left { grid-area: left; 
- background-image: url("GrassSamp1.jpg");  
- min-width: 300px;     
-}
-.content { grid-area: content; 
-max-width: 1100px;
-background-color: rgb(211, 211, 211);
-text-align: left;
-}
-
-.main { grid-area: main; 
-max-width: 1100px;
-background-color: rgb(211, 211, 211);
-text-align: left;
-}
-
-#title {
-    text-align: left;
+.item4 { grid-area: header; 
+height: 360px;
 
 }
-h2{
-    text-align: center;
+.item5 { grid-area: main; 
+background-color:  #f5f5f0;
+height: 360px;
 }
-h1{
-    text-align: center;
-}
-
-.right { grid-area: right; 
-background-image: url("GrassSamp1.jpg");
-min-width: 300px; 
-}
-.main { grid-area: main; }
+.item6 { grid-area: footer; }
 
 .grid-container {
   display: grid;
   grid-template-areas:
-    'left       header   right '
-    'left       content  right '
-    'left       main     right';
-  grid-gap: 20px;
-  background-color: rgb(211, 211, 211);
-  padding: 0px 0px;
+    'welcome welcome welcome welcome welcome welcome'
+    'contact contact contact contact contact contact'
+    'menu menu menu menu menu menu'
+    'header header header header header header'
+    'main main main main main main'
+    'footer footer footer footer footer footer';
+  grid-gap: 0px;
+  background-color: #ffffff;
+  padding: 0px;
+  margin:0;
 }
 
-.grid-container > div {
-  background-color: rgb(211, 211, 211);
-  text-align: left;
-  padding: 20px 0;
-  font-size: 15px;
-}
 
-    </style>
+
+</style>
 </head>
 <body>
-    
+
+
 <div class="grid-container">
-  <div class="header">
-  	<button>გიყვარვარ? თუ კი, დააჭირე</button>
-<ul>
-  <li><a href="default.asp">ქეთა მიყვარხარ</a></li>
-  <li><a href="about.asp">ქეთევან მიყვარხარ</a></li>
-  <li><a href="news.asp">ქეთუნა მიყვარხარ</a></li>
-  <li><a href="contact.asp">ქეთი მიყვარხარ</a></li>
-  <li><a href="about.asp">ქეთუნიკო მიყვარხარ</a></li>
-</ul>
-
-    <h1>ქეთა, მზად ხარ ბუღალტერიის სასწავლად?</h1></div>
-  <div class="left"></div>
-  
-  <div class="content"> 
-    <h2 id=title>სარჩევი:</h2>
-
-    <ol>
-        <li>
-            <a href="#business" > ზოგადი მიმოხილვა </a>    
-                <audio controls>
-                  <source src="shesavali_bugalteriashi.mp3" type="audio/mpeg">
-                        Your browser does not support the audio element.
-                </audio>  
-        </li>
-
-        <li>
-             
-            <a href="#stakeholders" > ბიზნეს ორგანიზაცია და მათი მომხმარებლები </a> 
-                <audio controls>
-                 <source src="biznesorganizaciadamatimomxmareblebi.mp3" type="audio/mpeg">
-                    Your browser does not support the audio element.
-                </audio>     
-        </li>
-
-        <li>
-             
-            <a href="#stakeholders" > საწარმოთა ფორმები </a> 
-              
-                   
-        </li>
-    </ol>
-
-  
-
-</div>  
-
-  <div class="right"></div>
-
-  <div class="main">
-      <h2 id="business">1. ზოგადი მიმოხილვა<br></h2>
-      <p >
-ვიწყებთ ბუღალტერიის ზოგადი მიმოხილვით. <br>
-<strong>რა არის ბუღალტერია?</strong> <br>
-ბუღალტერია, იგივე ბუღალტრული აღრიცხვა არის <strong>ფინანსური ოპერაციების</strong> ჩაწერის პროცესი. ჩაწერა უნდა მოხდეს ზუსტად და თანმიმდევრულად. <br> <br>
-
-<strong>რა არის ფინანსური ოპერაცია?</strong> <br>
-ფინანსური ოპერაცია არის ყველა ის ოპერაცია, რაც ფულით გამოისახება. <br>
-მაგალითად: <br>
-•   <strong>გაყიდვები</strong> - როდესაც ვყიდით საქონელს ან მომსახურებას; <br>
-•   <strong>შესყიდვები </strong>- როდესაც ვყიდულობთ საქონელს ან მომსახურებას <br>
-•   <strong>გადასახადები</strong> - გადასახადების გადახდა ბიუჯეტში (მაგალითად, საშემოსავლო და მოგების გადასახადი);<br>
-•   <strong>სხვა გადახდები</strong>, რომლებშიც შედის სხვისთვის ფულის გადახდა (მაგალითად, საქონლის შესაძენად მომწოდებლისთვის ფულის გადახდა, ან დაქირავებული თანამშრომლისთვის ხელფასის გაცემა <br>
-•   <strong>ფულის შემოსვლები</strong> - (ფულის მიღება მაგალითად, მყიდველისგან)<br>
-
-
-ყველა ასეთი ოპერაციები შეიტანება ორგანიზაციის <strong>ბუღალტრული აღრიცხვის ჩანაწერებში</strong>, რომელსაც ასევე ქვია <strong>პირველადი აღრიცხვის დოკუმენტები.</strong><br>
-ამ კურსის განმავლობაში ვისწავლით, თუ როგორ ჩავწეროთ თითოეული ოპერაცია <strong>პირველადი აღრიცხვის დოკუმენტებში</strong>.<br><br>
-
-ასევე, ძალიან მნიშნელოვანია, რომ ყველა ოპერაციას, რომელსაც ჩავწერთ (აღვრიცხავთ), უნდა ქონდეს ამ ოპერაციის <strong>დამადასტურებელი დოკუმენტი.</strong> მაგალითად, ინვოისი, ჩეკი. <br><br><br>
-
-
-
-</p><hr>
-
-<h2 id="stakeholders">2. ბიზნეს ორგანიზაცია და მათი მომხმარებლები<br></h2>
-<h3>ბიზნეს ორგანიზაციის მომხმარებლები</h3>
-<p>    
-
-<strong>ბიზნეს ორგანიზაციის მომხმარებელი</strong> არის ფიზიკური პირი ან საწარმო, ან პიზიკური პირებისგან ან საწარმოებისგან შემდგარი ჯგუფი, რომელბსაც აქვთ ინტერესი ამ ორგანიზაციის და მისი საქმიანობის მიმართ (მაგალითად: <strong>მეპატრონე, აქციონერი, დასაქმებული, მომწოდებელი, მთავრობა და სხვა).</strong> <br><br>
-
-მათი ინტერესი სხვადასხვანაირი შეიძლება იყოს. <br>
-  დასაქმებულის ინტერესი არის სამუშაოთი უზრუნველყოფა და იმაში დარწმუნება, რამდენად შეძლებს კომპანია გამომუშავებული ხელფასის ანაზღაურებას. <br>
-  აქციონერების ინტერესები არის დივიდენდების მიღება. <br>
-  საპროტესტო  ჯგუფის ინტერესია კომპანია და მათი საქმიანობა ხომ არ უქმნის საფრთხეს გარემოს და ა.შ. <br><br>
-
-მომხმარებლების ინტერესებს შორის შეიძლება წარმოიშვას <strong>კონფლიქტი</strong>:<br>
-მენეჯერებს შეიძლება სურდეთ გაზარდონ ბაზარზე კომპანიის წილი და  რესურები მოახმარონ ინფრასტრუქტურის აშენებას. ეს გამოიწვევს ფულადი ნაკადების შემცირებას კომპანიაში და შესაბამისად მფლობელებს მისცემს ნაკლები დივიდენდის განაწილების საშუალებას ანუ კონფლიქტში მოდის მფლობელების ინტერესებთან.<br>
-დასაქმებულებს და მენეჯერებს შესაძლოა სურდეთ დასაქმებულების კეთილდღეობის მიზნით გაზარდონ მათი ხელფასები, რომელიც მეორეს მხრივ, შეამცირებს კომპანიის მოგებას, რაც, ასევე, კონფლიქტში მოდის ორგანიზაციის დამფუძნებლების ინტერესებთან.<br><br>
-
-განვმარტოთ კიდევ ერთი მნიშვნელოვანი ტერმინი:<br>
-<strong>სააგენტო ურთიერთობა</strong> არის შეთანხმებული ურთიერთობა ორ მხარეს შორის, სადაც ერთი პირი ან საწარმო უფლებას აძლებს სხვას იმოქმედოს მისი სახელით (მაგ. დირექტორი ).ორგანიზაციის დირექტორები და მენეჯერები მართავენ ორგანიზაციას აქციონერების სახელით, როგორც აგენტები. სააგენტო ურთიერთობების ბუნება ძალიან მნიშვნელოვანია. 
-
-
-</p>
-
-<p>
-   <h2 id="typesofbusiness">3. საწარმოთა ფორმები<br></h2> 
-  პირველ რიგში განვმარტოთ რა არის სამეწარმეო საქმიანობა.<br>
- <strong>2. სამეწარმეო საქმიანობად მიიჩნევა მართლზომიერი და არაერთჯერადი საქმიანობა, რომელიც ხორციელდება მოგების მიზნით, დამოუკიდებლად და ორგანიზებულად.</strong><br>  <br> 
- <strong>რა ტიპის საწარმოები შეიძლება შეგვხვდეს?</strong><br>
- არსებობს სამი ძირითადი საწარმოთა ფორმა:<br>
- <strong>ინდივიდუალური მეწარმე</strong><br>
- <strong>ამხანაგობა</strong><br>
-<strong>შეზღუდული პასუხისმგებლობის კომპანია</strong><br><br>
-
-<strong>ინდივიდიუალური მეწარმე</strong> -საქმიან ურთიერთობებში გამოდის საკუთარი სახელით, თავად მართავს ბიზნესს. ნას შეიძლება ყავდეს თანამშრომლები. სამეწარმეო საქმიანობიდან წარმოშობილი ვალდებულებებისათვის კრედიტორების წინაშე პასუხს აგებს პირადად, მთელი თავისი ქონებით.<br>
-
-
-</p> <hr>
-
-
-  </div>
+  <div class="item1">Welcome</div>
+  <div class="item2">Contact</div>
+  <div class="item3">Menu</div>
+  <div class="item4">Header</div>
+  <div class="item5">Main</div>  
+    <div class="item6">Footer</div>
 </div>
-
-
-    
-
-   
-
-
 
 </body>
 </html>
